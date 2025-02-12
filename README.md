@@ -38,7 +38,7 @@ pip install openai python-dotenv pyodbc sqlite3
 ## Configuration
 
 ### 1. Environment Variables
-Create a `.env` file in the project root:
+Edit a `.env` file in the project root:
 
 ```plaintext
 DB_SERVER=your_sql_server
@@ -47,33 +47,6 @@ DB_USERNAME=your_username
 DB_PASSWORD=your_password
 OPENAI_API_KEY=your_openai_api_key
 ```
-
-### 2. Database Connector
-Create `db_connector.py`:
-
-```python
-import pyodbc
-import os
-from dotenv import load_dotenv
-
-# Load environment variables
-load_dotenv()
-
-def connect_to_db():
-    try:
-        conn = pyodbc.connect(
-            f"DRIVER={{SQL Server}};"
-            f"SERVER={os.getenv('DB_SERVER')};"
-            f"DATABASE={os.getenv('DB_DATABASE')};"
-            f"UID={os.getenv('DB_USERNAME')};"
-            f"PWD={os.getenv('DB_PASSWORD')}"
-        )
-        return conn
-    except Exception as e:
-        print("Database connection failed:", e)
-        return None
-```
-
 ## Usage
 
 1. Run the main script:
