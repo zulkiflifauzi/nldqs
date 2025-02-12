@@ -21,8 +21,8 @@ This system enables you to:
 
 1. Clone the repository:
 ```bash
-git clone [your-repository-url]
-cd [repository-name]
+git clone https://github.com/zulkiflifauzi/nldqs
+cd nldqs
 ```
 
 2. Install required packages:
@@ -78,7 +78,7 @@ def connect_to_db():
 
 1. Run the main script:
 ```bash
-python main.py
+python query_ai.py
 ```
 
 2. Enter your question when prompted:
